@@ -12,10 +12,10 @@ Use pytorch to build Transformer model structure
 ## Step3: Build the Encoder 🛠️
 
 
-# Step4: Build the Decoder Block and Decoder 🛠️
+## Step4: Build the Decoder Block and Decoder 🛠️
 
 
-# Step5: Combine the above structures together to form the Transformer model 🛠️
+## Step5: Combine the above structures together to form the Transformer model 🛠️
 
 
 
