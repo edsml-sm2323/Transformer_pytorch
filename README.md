@@ -33,6 +33,8 @@ Layer Normalization: Calculate the mean and variance of the output of each layer
   <img src="images/Encoder.png" width="150" />
 </div>
 
+Perform Input Embedding and Positional Encoding on the input. In addition, set N Transformer Blocks.
+
 
 ## Step4: Build the Decoder Block and Decoder 🛠️
 
