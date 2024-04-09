@@ -28,9 +28,10 @@ class Encoder(nn.Module):
                     heads,
                     dropout=dropout,
                     forward_expansion=forward_expansion,
-                )
+                ) for _ in range(num_layers)
             ]
         )
+        
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, mask):
