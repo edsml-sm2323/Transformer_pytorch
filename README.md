@@ -36,10 +36,29 @@ Layer Normalization: Calculate the mean and variance of the output of each layer
 Perform Input Embedding and Positional Encoding on the input. In addition, set N Transformer Blocks.
 
 
-## Step4: Build the Decoder Block and Decoder 🛠️
+## Step4: Build the Decoder Block 🛠️
+<div align="center">
+  <img src="images/DecoderBlock.png" width="150" />
+</div>
 
+The first is to write the Attention structure with Mask. Then, because the above structure is the same as the Transformer Block in Encoder, we call it directly.
 
-## Step5: Combine the above structures together to form the Transformer model 🛠️
+## Step5: Build the Decoder 🛠️
+<div align="center">
+  <img src="images/Decoder.png" width="150" />
+</div>
+
+Perform Input Embedding and Positional Encoding on the input. In addition, set N Decoder Blocks.  
+
+Then, Linear and softmax.
+
+## Step6: Combine the above structures together to form the Transformer model 🛠️
+
+First, a mask is generated for the input sequence using the make_src_mask and make_trg_mask methods.  
+
+The source sequence and its mask are then passed to the encoder, which returns a continuous representation of the source sequence.  
+
+Finally, the target sequence, the output of the encoder, the source sequence mask, and the target sequence mask are passed to the decoder, which generates the final output.  
 
 
 
